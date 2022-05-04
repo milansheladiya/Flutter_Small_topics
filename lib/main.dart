@@ -1,4 +1,5 @@
 import 'package:exam_demo/progressBarExample.dart';
+import 'package:exam_demo/readJsonData.dart';
 import 'package:exam_demo/secondPage.dart';
 import 'package:flutter/material.dart';
 import 'package:exam_demo/textbox.dart';
@@ -6,6 +7,8 @@ import 'package:exam_demo/bottomNavigationbar.dart';
 
 import 'ImageView.dart';
 import 'dateTimePicker.dart';
+import 'dialogbox.dart';
+import 'httpJsonExample.dart';
 
 void main() {
   runApp(const MyApp());
@@ -86,6 +89,27 @@ class FirstPage extends StatelessWidget {
               MaterialPageRoute(builder: (context) => DateTimePicker_()),
             );
           },child: Text("Date picker"),),
+
+
+          RaisedButton(onPressed: (){
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => DialogBox_()),
+            );
+          },child: Text("Dialog box"),),
+
+
+          RaisedButton(onPressed: (){
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => HttpJsonExample(key!)),
+            );
+          },child: Text("Http json example"),),
+
+
+          RaisedButton(onPressed: (){
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => ReadJsonFile()),
+            );
+          },child: Text("Read JSON"),),
         ],
       ),
     );
